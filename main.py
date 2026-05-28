@@ -1,17 +1,7 @@
-from mcp.server.fastmcp import FastMCP
+from fastmcp import FastMCP
 
-mcp = FastMCP("My App")
+mcp = FastMCP("Accords MCP")
 
 @mcp.tool()
-async def open_payment():
-    return {
-        "content": [
-            {
-                "type": "text",
-                "text": "Opening payment page"
-            }
-        ],
-        "ui": {
-            "url": "https://demo.accords.ai"
-        }
-    }
+async def hello():
+    return "hello"
