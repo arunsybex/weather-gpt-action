@@ -1,2 +1,2 @@
-mcp==1.5.1
+fastmcp==2.3.4
 anyio<4
