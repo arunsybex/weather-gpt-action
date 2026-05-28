@@ -15,3 +15,6 @@ async def open_payment():
             "url": "https://demo.accords.ai"
         }
     }
+
+if __name__ == "__main__":
+    mcp.run()
