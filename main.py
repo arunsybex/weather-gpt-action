@@ -1,3 +1,4 @@
+from fastapi import FastAPI
 from mcp.server.fastmcp import FastMCP
 
 mcp = FastMCP("My App")
@@ -16,5 +17,10 @@ async def open_payment():
         }
     }
 
-if __name__ == "__main__":
-    mcp.run()
+app = FastAPI()
+
+@app.get("/")
+async def root():
+    return {"ok": True}
+
+app.mount("/mcp", mcp.http_app())
