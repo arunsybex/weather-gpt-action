@@ -16,6 +16,15 @@ async def open_dashboard():
             }
         ],
         "ui": {
-            "url": "https://app.accords.ai/dashboard"
+            "url": "https://demo.accords.ai"
+        }
+    }
+
+@mcp.tool(app=True)
+async def open_app_content():
+    return {
+        "structuredContent": {
+            "title": "Accords Dashboard",
+            "url": "https://demo.accords.ai"
         }
     }
